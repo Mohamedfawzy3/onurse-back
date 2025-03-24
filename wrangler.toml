@@ -1,0 +1,14 @@
+name = "nursing-app"
+type = "javascript"
+
+account_id = "$CLOUDFLARE_ACCOUNT_ID"
+workers_dev = true
+
+[env.production]
+name = "nursing-app-production"
+route = "your_actual_production_domain.com/*"
+zone_id = "your_actual_zone_id"
+
+[site]
+bucket = "./public"
+entry-point = "workers-site"
